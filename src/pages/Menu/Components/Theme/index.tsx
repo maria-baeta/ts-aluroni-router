@@ -1,4 +1,4 @@
-import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
+import { MdDarkMode, MdOutlineDarkMode } from 'react-icons/md';
 interface THEME {
   setTheme: () => void;
   themeDark: boolean;

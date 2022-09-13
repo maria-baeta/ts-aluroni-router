@@ -1,13 +1,12 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { FC, useEffect, useState } from "react";
-import { Item } from "./Item";
-import items from "./items.json";
-import styles from "./Items.module.scss";
+import { FC, useEffect, useState } from 'react';
+import { Item } from './Item';
+import items from './items.json';
+import styles from './Items.module.scss';
 import {
   hadleOrder,
   handleFilter,
   handleSearch,
-} from "./utils/handleOrderandFilter";
+} from './utils/handleOrderandFilter';
 
 interface INTERFACEITEMS {
   search: string;
