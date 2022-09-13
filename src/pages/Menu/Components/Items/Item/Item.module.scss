@@ -1,0 +1,143 @@
+@import "styles/_variables.scss";
+@import "styles/_breakpoints.scss";
+
+$massasLigth: #3b91d7;
+$carnesLigth: #d73b3b;
+$combosLigth: #e6c864;
+$veganosLigth: #80aa40;
+
+$massasDark: #6fa6d3;
+$carnesDark: #d16161;
+$combosDark: #f7e198;
+$veganosDark: #95af6f;
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  &__image {
+    min-width: 240px;
+    @media (max-width: $desktop_xsm) {
+      width: 100%;
+    }
+    img {
+      border-radius: 8px;
+      width: 100%;
+    }
+  }
+  &__description_ligth {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 20px;
+    @media (max-width: $desktop_xsm) {
+      flex-direction: row;
+      margin-top: 20px;
+      padding: 0;
+    }
+  }
+  &__description_dark {
+    color: white;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 20px;
+    @media (max-width: $desktop_xsm) {
+      flex-direction: row;
+      margin-top: 20px;
+      padding: 0;
+    }
+  }
+  &__title {
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    p {
+      color: $dark-grey;
+      font-size: 1.3rem;
+      font-weight: 600;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+  }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    max-width: 700px;
+    @media (max-width: $desktop_xsm) {
+      justify-content: flex-end;
+    }
+    @media (max-width: $mobile) {
+      justify-content: flex-start;
+    }
+    > div {
+      margin: 10px;
+    }
+  }
+  &__type {
+    align-items: center;
+    border-radius: 2px;
+    display: flex;
+    font-weight: bold;
+    height: 40px;
+    justify-content: center;
+    padding: 10px 30px;
+    &__massasLigth {
+      background-color: $massasLigth;
+      color: white;
+    }
+    &__carnesLigth {
+      background-color: $carnesLigth;
+      color: white;
+    }
+    &__combosLigth {
+      background-color: $combosLigth;
+    }
+    &__veganosLigth {
+      background-color: $veganosLigth;
+    }
+    &__massasDark {
+      background-color: $massasDark;
+      color: black;
+    }
+    &__carnesDark {
+      background-color: $carnesDark;
+      color: black;
+    }
+    &__combosDark {
+      background-color: $combosDark;
+    }
+    &__veganosDark {
+      background-color: $veganosDark;
+    }
+  }
+  &__portion_ligth,
+  &__qtdpeople_ligth,
+  &__value {
+    align-items: center;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: bold;
+    justify-content: center;
+  }
+  &__portion_dark,
+  &__qtdpeople_dark {
+    color: white;
+    align-items: center;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: bold;
+    justify-content: center;
+  }
+  &__value {
+    color: $red;
+    font-size: 1.7rem;
+  }
+}

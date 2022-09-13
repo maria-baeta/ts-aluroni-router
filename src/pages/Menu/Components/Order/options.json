@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Limpar",
+    "value": ""
+  },
+  {
+    "name": "Menor Preço",
+    "value": "lowestPrice"
+  },
+  {
+    "name": "Maior preço",
+    "value": "biggestPrice"
+  },
+  {
+    "name": "Pequenas porções",
+    "value": "smallPortions"
+  },
+  {
+    "name": "Grandes porções",
+    "value": "bigPortions"
+  },
+  {
+    "name": "Serve uma pessoa",
+    "value": "forOne"
+  },
+  {
+    "name": "Serve mais pessoas",
+    "value": "forMore"
+  }
+]
