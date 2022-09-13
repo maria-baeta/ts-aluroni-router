@@ -1,5 +1,5 @@
-import classNames from 'classnames';
-import styles from './Item.module.scss';
+import classNames from "classnames";
+import styles from "./Item.module.scss";
 
 interface INTERFACEITEM {
   item: {
@@ -20,7 +20,6 @@ interface INTERFACEITEM {
 
 export const Item = ({ item, themeDark }: INTERFACEITEM) => {
   const { title, description, category, size, serving, price, photo } = item;
-  console.log(themeDark);
 
   return (
     <div className={styles.item}>
@@ -64,7 +63,7 @@ export const Item = ({ item, themeDark }: INTERFACEITEM) => {
             [styles.item__qtdpeople_dark]: themeDark,
           })}
         >
-          Serve {serving} pessoa{serving === 1 ? '' : 's'}
+          Serve {serving} pessoa{serving === 1 ? "" : "s"}
         </div>
         <div className={styles.item__value}>R$ {price.toFixed(2)}</div>
       </div>

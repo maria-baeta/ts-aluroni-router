@@ -1,13 +1,13 @@
-import styles from './Menu.module.scss';
-import { ReactComponent as Logo } from 'assets/logo.svg';
-import { useState } from 'react';
-import { Search, Filters, Order, Items, Theme } from './Components';
-import classNames from 'classnames';
+import styles from "./Menu.module.scss";
+import { ReactComponent as Logo } from "assets/logo.svg";
+import { useState } from "react";
+import { Search, Filters, Order, Items, Theme } from "./Components";
+import classNames from "classnames";
 
 export const Menu = () => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<number | null>(null);
-  const [order, setOrder] = useState('');
+  const [order, setOrder] = useState("");
   const [themeDark, setThemeDark] = useState(false);
 
   const handleTheme = () => {
