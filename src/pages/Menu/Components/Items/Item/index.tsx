@@ -15,10 +15,9 @@ interface INTERFACEITEM {
       label: string;
     };
   };
-  themeDark: boolean;
 }
 
-export const Item = ({ item, themeDark }: INTERFACEITEM) => {
+export const Item = ({ item }: INTERFACEITEM) => {
   const { title, description, category, size, serving, price, photo } = item;
 
   return (
@@ -27,10 +26,7 @@ export const Item = ({ item, themeDark }: INTERFACEITEM) => {
         <img src={photo} alt={title} />
       </div>
       <div
-        className={classNames({
-          [styles.item__description_ligth]: true,
-          [styles.item__description_dark]: themeDark,
-        })}
+        className={styles.item__description_ligth}
       >
         <div className={styles.item__title}>
           <h2>{title}</h2>
@@ -43,25 +39,18 @@ export const Item = ({ item, themeDark }: INTERFACEITEM) => {
             [styles.item__type]: true,
             [styles[`item__type__${category.label.toLocaleLowerCase()}Ligth`]]:
               true,
-            [styles[`item__type__${category.label.toLocaleLowerCase()}Dark`]]:
-              themeDark,
+
           })}
         >
           {category.label}
         </div>
         <div
-          className={classNames({
-            [styles.item__portion_ligth]: true,
-            [styles.item__portion_dark]: themeDark,
-          })}
+          className={styles.item__portion_ligth}
         >
           {size}g
         </div>
         <div
-          className={classNames({
-            [styles.item__qtdpeople_ligth]: true,
-            [styles.item__qtdpeople_dark]: themeDark,
-          })}
+          className={styles.item__qtdpeople_ligth}
         >
           Serve {serving} pessoa{serving === 1 ? "" : "s"}
         </div>
