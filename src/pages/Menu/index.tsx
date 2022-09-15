@@ -1,6 +1,7 @@
 import styles from "./Menu.module.scss";
 import { useState } from "react";
 import { Search, Filters, Order, Items } from "./Components";
+import stylesTheme from "styles/Theme.module.scss";
 
 export const Menu = () => {
   const [search, setSearch] = useState("");
@@ -10,7 +11,7 @@ export const Menu = () => {
   return (
     <section className={styles.menu}>
       <h3
-        className={styles.menu__title_ligth}
+        className={stylesTheme.title}
       >
         Cardápio
       </h3>
