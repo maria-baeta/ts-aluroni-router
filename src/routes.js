@@ -1,5 +1,5 @@
 import { Header, Navbar } from "components";
-import { Home, Menu } from "pages";
+import { Home, Menu, About } from "pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const AppRoute = () => {
@@ -11,6 +11,7 @@ const AppRoute = () => {
           <Route path="/" element={<Header />}>
             <Route index element={<Home />} />
             <Route path="cardapio" element={<Menu />} />
+            <Route path="sobre" element={<About />} />
           </Route>
         </Routes>
       </Router>
