@@ -1,4 +1,4 @@
-import { Header, Navbar } from "components";
+import { Footer, Header, Navbar } from "components";
 import { Home, Menu, About } from "pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -14,6 +14,7 @@ const AppRoute = () => {
             <Route path="sobre" element={<About />} />
           </Route>
         </Routes>
+        <Footer />
       </Router>
     </main>
   );
