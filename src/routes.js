@@ -1,5 +1,5 @@
 import { Footer, Header, Navbar } from "components";
-import { Home, Menu, About } from "pages";
+import { Home, Menu, About, NoResult } from "pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const AppRoute = () => {
@@ -13,6 +13,7 @@ const AppRoute = () => {
             <Route path="cardapio" element={<Menu />} />
             <Route path="sobre" element={<About />} />
           </Route>
+          <Route path="*" element={<NoResult />} />
         </Routes>
         <Footer />
       </Router>
