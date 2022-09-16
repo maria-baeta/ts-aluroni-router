@@ -1,12 +1,12 @@
-import { Footer, Header, Navbar } from "components";
+import { Footer, Header } from "components";
 import { Home, Menu, About, NoResult } from "pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const AppRoute = () => {
   return (
-    <main>
+    <main className='container'>
       <Router>
-        <Navbar />
+
         <Routes>
           <Route path="/" element={<Header />}>
             <Route index element={<Home />} />
