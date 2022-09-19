@@ -1,23 +1,10 @@
 import classNames from "classnames";
+import { ITEM } from "utils/interface";
 import styles from "./Item.module.scss";
 
-interface INTERFACEITEM {
-  item: {
-    title: string;
-    description: string;
-    photo: string;
-    size: number;
-    serving: number;
-    price: number;
-    id: number;
-    category: {
-      id: number;
-      label: string;
-    };
-  };
-}
 
-export const Item = ({ item }: INTERFACEITEM) => {
+
+export const Item = ({ item }: ITEM) => {
   const { title, description, category, size, serving, price, photo } = item;
 
   return (

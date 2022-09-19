@@ -2,13 +2,21 @@ import itemMenu from "data/itemsMenu.json";
 import styles from "./Home.module.scss";
 import stylesTheme from "styles/Theme.module.scss";
 import ourHome from "assets/home/nossa_casa.png";
+import { ITEM } from "utils/interface";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
   let recommendations = [...itemMenu];
+  const navegate = useNavigate();
 
   recommendations = recommendations
     .sort(() => 0.5 - Math.random())
     .splice(0, 3);
+
+  const redirect = (item: ITEM) => {
+    const { id } = item.item;
+    navegate(`/sugestao/${id}`, { state: { ...item.item } });
+  };
 
   return (
     <section>
@@ -19,7 +27,12 @@ export const Home = () => {
             <div className={styles.recommended__image}>
               <img src={item.photo} alt={item.title} />
             </div>
-            <button className={styles.recommended__button}>Ver mais</button>
+            <button
+              className={styles.recommended__button}
+              onClick={() => redirect({ item })}
+            >
+              Ver mais
+            </button>
           </div>
         ))}
       </div>
