@@ -2,7 +2,7 @@ import itemMenu from "data/itemsMenu.json";
 import styles from "./Home.module.scss";
 import stylesTheme from "styles/Theme.module.scss";
 import ourHome from "assets/home/nossa_casa.png";
-import { ITEM } from "utils/interface";
+import { ITEM } from "types/interface";
 import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
@@ -15,7 +15,7 @@ export const Home = () => {
 
   const redirect = (item: ITEM) => {
     const { id } = item.item;
-    navegate(`/sugestao/${id}`, { state: { ...item.item } });
+    navegate(`/sugestao/${id}`, { state: { ...item } });
   };
 
   return (

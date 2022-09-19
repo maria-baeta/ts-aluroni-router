@@ -1,15 +1,11 @@
 @import "styles/_variables.scss";
 @import "styles/_breakpoints.scss";
 
-$massasLigth: #3b91d7;
-$carnesLigth: #d73b3b;
-$combosLigth: #e6c864;
-$veganosLigth: #80aa40;
+$pastas: #3b91d7;
+$meat: #d73b3b;
+$combos: #e6c864;
+$vegans: #80aa40;
 
-$massasDark: #6fa6d3;
-$carnesDark: #d16161;
-$combosDark: #f7e198;
-$veganosDark: #95af6f;
 .item {
   display: flex;
   flex-wrap: wrap;
@@ -89,47 +85,24 @@ $veganosDark: #95af6f;
     height: 40px;
     justify-content: center;
     padding: 10px 30px;
-    &__massasLigth {
-      background-color: $massasLigth;
+    &__pastas {
+      background-color: $pastas;
       color: white;
     }
-    &__carnesLigth {
-      background-color: $carnesLigth;
+    &__meat {
+      background-color: $meat;
       color: white;
     }
-    &__combosLigth {
-      background-color: $combosLigth;
+    &__combos {
+      background-color: $combos;
     }
-    &__veganosLigth {
-      background-color: $veganosLigth;
-    }
-    &__massasDark {
-      background-color: $massasDark;
-      color: black;
-    }
-    &__carnesDark {
-      background-color: $carnesDark;
-      color: black;
-    }
-    &__combosDark {
-      background-color: $combosDark;
-    }
-    &__veganosDark {
-      background-color: $veganosDark;
+    &__vegans {
+      background-color: $vegans;
     }
   }
-  &__portion_ligth,
-  &__qtdpeople_ligth,
+  &__portion,
+  &__qtdpeople,
   &__value {
-    align-items: center;
-    display: flex;
-    font-size: 1.25rem;
-    font-weight: bold;
-    justify-content: center;
-  }
-  &__portion_dark,
-  &__qtdpeople_dark {
-    color: white;
     align-items: center;
     display: flex;
     font-size: 1.25rem;

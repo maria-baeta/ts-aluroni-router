@@ -1,11 +1,13 @@
+import { FC } from "react";
 import classNames from "classnames";
-import { ITEM } from "utils/interface";
+import { ITEM } from "types/interface";
 import styles from "./Item.module.scss";
+import { convertLabel } from "utils/label";
 
 
 
-export const Item = ({ item }: ITEM) => {
-  const { title, description, category, size, serving, price, photo } = item;
+export const Item: FC<ITEM> = (item) => {
+  const { title, description, category, size, serving, price, photo } = item.item;
 
   return (
     <div className={styles.item}>
@@ -24,7 +26,7 @@ export const Item = ({ item }: ITEM) => {
         <div
           className={classNames({
             [styles.item__type]: true,
-            [styles[`item__type__${category.label.toLocaleLowerCase()}Ligth`]]:
+            [styles[`item__type__${convertLabel(category.label)}`]]:
               true,
 
           })}
