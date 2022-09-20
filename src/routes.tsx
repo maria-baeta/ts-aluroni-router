@@ -11,8 +11,8 @@ const AppRoute = () => {
             <Route index element={<Home />} />
             <Route path="cardapio" element={<Menu />} />
             <Route path="sobre" element={<About />} />
-            <Route path='sugestao/:id' element={<Details />} />
           </Route>
+          <Route path='sugestao/:id' element={<Details />} />
           <Route path="*" element={<NoResult />} />
         </Routes>
         <Footer />

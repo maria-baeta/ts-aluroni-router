@@ -1,8 +1,10 @@
+import React from "react";
 import styles from "./Header.module.scss";
 import { Outlet } from "react-router-dom";
 import stylesTheme from "styles/Theme.module.scss";
 import { Navbar } from "../Navbar";
-export const Header = () => {
+
+export const Header = ({ children }: { children?: React.ReactNode }) => {
   return (
     <>
       <Navbar />
@@ -11,6 +13,7 @@ export const Header = () => {
       </header>
       <div className={stylesTheme.container}>
         <Outlet />
+        {children}
       </div>
     </>
   );

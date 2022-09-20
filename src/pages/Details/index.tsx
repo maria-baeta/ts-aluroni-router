@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import styles from "./Details.module.scss";
 import items from "data/itemsMenu.json";
-import { Tags } from "components";
+import { Header, Tags } from "components";
 import { NoResult } from "pages/NoResult";
 
 export const Details = () => {
@@ -20,7 +20,8 @@ export const Details = () => {
   };
 
   return (
-    <>
+    <Header>
+      {/* <Header /> */}
       <button className={styles.comeBack} onClick={comeBack}>
         {"< Voltar"}
       </button>
@@ -34,6 +35,6 @@ export const Details = () => {
           <Tags item={item} />
         </div>
       </section>
-    </>
+    </Header>
   );
 };
