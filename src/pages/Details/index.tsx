@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import styles from "./Details.module.scss";
 import items from "data/itemsMenu.json";
 import { Tags } from "components";
+import { NoResult } from "pages/NoResult";
 
 export const Details = () => {
   const { id } = useParams();
@@ -10,7 +11,7 @@ export const Details = () => {
   const item = items.find(item => item.id === Number(id));
 
   if (!item) {
-    return "";
+    return <NoResult />;
   }
 
 
@@ -20,7 +21,6 @@ export const Details = () => {
 
   return (
     <>
-
       <button className={styles.comeBack} onClick={comeBack}>
         {"< Voltar"}
       </button>
