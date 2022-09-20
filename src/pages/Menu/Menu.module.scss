@@ -1,0 +1,13 @@
+@import "styles/_variables.scss";
+@import "styles/_breakpoints.scss";
+
+.menu {
+  &__filters {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
